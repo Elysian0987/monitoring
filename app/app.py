@@ -22,7 +22,7 @@ def hello():
     REQUEST_COUNT.labels('GET', '/').inc()
     with REQUEST_LATENCY.time():
         time.sleep(random.uniform(0.1, 1.5))  # simulate latency
-    return "Hello SRE 👋"
+    return "Greetings from the observable universe! Your metrics are looking sharp today."
 
 @app.route("/metrics")
 def metrics():
